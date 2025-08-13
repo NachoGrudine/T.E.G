@@ -1,0 +1,38 @@
+<div *ngIf="visible" class="pre-lobby-container">
+  <div class="pre-lobby">
+    <h2>Unirse a la Partida #{{ idPartida }}</h2>
+
+    <label for="nombre">Nombre del jugador:</label>
+    <input
+      id="nombre"
+      type="text"
+      [(ngModel)]="nombreJugador"
+      placeholder="Ingresa tu nombre"
+    />
+
+    <h3>Selecciona un color:</h3>
+    <div class="color-grid">
+      <button
+        *ngFor="let color of coloresDisponibles"
+        [disabled]="colorYaElegido(color.id)"
+        [class.selected]="idColorSeleccionado === color.id"
+        [ngStyle]="{ 'background-color': mapColorNombreToCss(color.color) }"
+        (click)="seleccionarColor(color.id)"
+        type="button"
+      >
+        {{ color.color }}
+      </button>
+    </div>
+
+    <div class="acciones">
+      <button
+        (click)="confirmar()"
+        [disabled]="!nombreJugador || idColorSeleccionado === null"
+        type="button"
+      >
+        Confirmar
+      </button>
+      <button (click)="cerrar()" type="button">Cancelar</button>
+    </div>
+  </div>
+</div>

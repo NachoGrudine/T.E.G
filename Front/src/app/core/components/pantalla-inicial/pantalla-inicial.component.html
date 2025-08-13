@@ -1,0 +1,70 @@
+
+<app-sidebar (atacar)="onAtaque($event)" (reagrupar)="onReagrupar($event)"
+  [paisDetalle]="paisDetalle"
+  [infoTurno]="infoTurno"
+  [objetivo]="jugador?.objetivo"
+  [idJugador]="jugadorID"
+  [puedeAtacar] = "puedeAtacar"
+  [puedeReagrupar]="puedeReagrupar"
+></app-sidebar>
+<app-notificaciones #notiRef></app-notificaciones>
+
+<app-turnos [jugadores]="jugadoresTurno"></app-turnos>
+
+<app-mapa (paisClickeado)="onPaisClickeado($event)" ></app-mapa>
+
+<button class="boton-fase" (click)="avanzarFase()" [disabled]="botonDeshabilitado">
+  {{ textoBoton }}
+</button>
+
+
+
+<app-barra-jugador
+  [tarjetas]="tarjetas"
+  >
+</app-barra-jugador>
+
+
+
+
+
+<app-versus-modal
+  [visible]="mostrarVersus"
+  [textoArriba]="textoArriba" [colorArriba]="colorArriba"
+  [textoMedio]="textoMedio" [colorMedio]="colorMedio"
+  [textoAbajo]="textoAbajo" [colorAbajo]="colorAbajo">
+</app-versus-modal>
+
+<app-dado-modal
+  *ngIf="mostrarDados"
+  [atacanteNombre]="atacanteNombre"
+  [defensorNombre]="defensorNombre"
+  [atacanteColor]="atacanteColor"
+  [defensorColor]="defensorColor"
+  [atacantePais]="atacantePais"
+  [defensorPais]="defensorPais"
+  [dadosAtacante]="dadosAtacante"
+  [dadosDefensor]="dadosDefensor"
+></app-dado-modal>
+
+
+<app-reagrupacion-modal
+  *ngIf="mostrarModalReagrupar"
+  [titulo]="titulo"
+  [botonTomarTexto]="botonTomarTexto"
+  [botonCancelarActivo]="botonCancelarActivo"
+  [min]="min"
+  [max]="max"
+  [colorFondo]="colorFondo"
+  [colorTexto]="colorTexto"
+  [colorBotonTomar]="colorBotonTomar"
+  [colorBotonCancelar]="colorBotonCancelar"
+  [colorControles]="colorControles"
+  (tomar)="reagruparEvent($event);"
+
+></app-reagrupacion-modal>
+
+
+
+
+

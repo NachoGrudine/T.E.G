@@ -1,0 +1,13 @@
+<div class="modal-fondo" *ngIf="visible" (click)="onFondoClick()">
+  <div class="modal-contenido" (click)="$event.stopPropagation()">
+    <div class="texto-arriba" [attr.data-text]="textoArriba" [style.color]="colorArriba">
+      {{ textoArriba }}
+    </div>
+    <div class="texto-medio" [style.color]="colorMedio">
+      {{ textoMedio }}
+    </div>
+    <div class="texto-abajo" [attr.data-text]="textoAbajo" [style.color]="colorAbajo">
+      {{ textoAbajo }}
+    </div>
+  </div>
+</div>

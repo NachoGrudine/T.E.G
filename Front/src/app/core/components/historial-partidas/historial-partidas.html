@@ -1,0 +1,30 @@
+<div class="historial-container">
+  <h3>Historial de Partidas</h3>
+
+  <div class="partidas-scroll-wrapper">
+    <div class="partidas-grid">
+      @for (partida of partidasPorUsuario; track partida.id) {
+        <div class="partida-card" (click)="abrirLobby(partida.id)">
+          <h4 class="partida-titulo">Partida #{{ partida.id }}</h4>
+          <div class="partida-info">
+            <strong>Estado: {{partida.estado.replaceAll('_', ' ').toLowerCase() | titlecase }}</strong>
+
+          </div>
+          <p class="jugadores-titulo">Jugadores:</p>
+          <ul class="jugadores-lista">
+            @for (jugador of partida.jugadores; track jugador.id) {
+              <li class="jugador-item">
+                {{ jugador.nombre }} <span class="jugador-id">(ID: {{ jugador.id }})</span>
+              </li>
+            }
+          </ul>
+        </div>
+      }
+      @empty {
+        <div class="sin-partidas">
+          No hay partidas para mostrar.
+        </div>
+      }
+    </div>
+  </div>
+</div>

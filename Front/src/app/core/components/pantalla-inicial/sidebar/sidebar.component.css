@@ -1,0 +1,97 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+   background: linear-gradient(135deg, #a3d5ff, #64b5f6);
+  padding: 5px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #002b4a;
+}
+
+.info-turno-wrapper {
+  flex: 0 0 14%;
+  border-radius: 15px;
+  padding: 0;
+  margin-bottom: 6px;
+  animation: bounceIn 0.5s ease forwards;
+  max-width: 100%;
+  overflow-y: auto;
+}
+
+.info-pais-wrapper {
+  flex: 0 0 54%;
+  background: #e0f7ff;
+  border: 3px solid #64b5f6;
+  border-radius: 15px;
+  padding: 0px;
+  box-shadow: inset 0 0 15px #a3d5ff;
+  overflow-y: auto;
+  margin-bottom: 6px;
+  transition: box-shadow 0.3s ease;
+}
+
+.info-pais-wrapper:hover {
+  box-shadow: inset 0 0 25px #64b5f6;
+}
+
+.mensajes-wrapper {
+  flex: 0 0 30%;
+  background: #e3f2fd;
+  border: 3px solid #64b5f6;
+  border-radius: 15px;
+  padding: 5px;
+  overflow-y: auto;
+  box-shadow: inset 0 0 12px #90caf9;
+  font-weight: bold;
+}
+
+/* Scrollbars estilo caricaturesco */
+.info-pais-wrapper::-webkit-scrollbar,
+.mensajes-wrapper::-webkit-scrollbar,
+.info-turno-wrapper::-webkit-scrollbar {
+  width: 10px;
+}
+
+.info-pais-wrapper::-webkit-scrollbar-track,
+.mensajes-wrapper::-webkit-scrollbar-track,
+.info-turno-wrapper::-webkit-scrollbar-track {
+  background: #e0f7ff;
+  border-radius: 10px;
+}
+
+.info-pais-wrapper::-webkit-scrollbar-thumb,
+.mensajes-wrapper::-webkit-scrollbar-thumb,
+.info-turno-wrapper::-webkit-scrollbar-thumb {
+  background: #64b5f6;
+  border-radius: 10px;
+  border: 2px solid #e0f7ff;
+}
+
+/* Animación opcional */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.info-pais-wrapper,
+.mensajes-wrapper,
+.info-turno-wrapper {
+  animation: bounceIn 0.5s ease forwards;
+}
+.objetivo-wrapper-externo {
+  flex: 1 1 auto; /* toma todo el espacio disponible restante */
+  background: #dbeeff;
+  border: 3px solid #64b5f6;
+  border-radius: 15px;
+  box-shadow: inset 0 0 15px #a3d5ff;
+  padding: 8px;
+  overflow-y: auto;
+  animation: bounceIn 0.5s ease forwards;
+}

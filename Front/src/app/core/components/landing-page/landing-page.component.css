@@ -1,0 +1,10 @@
+.container {
+  text-align: center;
+  padding-top: 150px;
+  text-shadow: 0px 0px 8px #000;
+}
+
+.btn-lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+}

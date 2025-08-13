@@ -1,0 +1,67 @@
+.modal-overlaye {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modale {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  background-color: rgba(6, 126, 223, 0.67);
+
+}
+
+
+.cancelar {
+  float: right;
+  padding: 8px 16px;
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.control {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  border: 2px solid white;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cantidad {
+  font-size: 5em;
+  font-weight: bold;
+
+  padding: 10px 20px;
+
+}
+
+.tomar {
+  font-size: 1.2em;
+  padding: 15px 40px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+
+

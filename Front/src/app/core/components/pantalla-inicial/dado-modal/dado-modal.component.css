@@ -1,0 +1,137 @@
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+
+.modal-content {
+  background: transparent;
+  padding: 0;
+  width: 90%;
+  max-width: 900px;
+
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  position: relative;
+}
+
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+.jugadores {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+
+.jugador {
+  flex: 1;
+  background: #00000088;
+  color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+
+
+}
+
+
+.jugador h3 {
+  margin-top: 0;
+  font-size: 2rem;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px  1px 0 white,
+    1px  1px 0 white,
+    0    0   10px rgba(255,255,255,0.1);
+}
+
+.jugador p {
+  font-size: 1.5rem;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px  1px 0 white,
+    1px  1px 0 white,
+    0    0   10px rgba(255,255,255,0.1);
+}
+
+
+
+.dado-cubo {
+  width: 60px;
+  height: 60px;
+  perspective: 500px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.cubo {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+  animation: tirarDado 0.8s ease-out;
+}
+
+.cara {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px  1px 0 #000,
+    1px  1px 0 #000;
+}
+
+
+.uno    { transform: rotateY(0deg)    translateZ(30px); }
+.seis   { transform: rotateY(180deg)  translateZ(30px); }
+.tres   { transform: rotateY(90deg)   translateZ(30px); }
+.cuatro { transform: rotateY(-90deg)  translateZ(30px); }
+.dos    { transform: rotateX(90deg)   translateZ(30px); }
+.cinco  { transform: rotateX(-90deg)  translateZ(30px); }
+
+
+.rotar-1 { transform: rotateY(0deg); }
+.rotar-2 { transform: rotateX(-90deg); }
+.rotar-3 { transform: rotateY(-90deg); }
+.rotar-4 { transform: rotateY(90deg); }
+.rotar-5 { transform: rotateX(90deg); }
+.rotar-6 { transform: rotateY(180deg); }
+
+
+@keyframes tirarDado {
+  0%   { transform: rotateX(720deg) rotateY(720deg); }
+  100% { transform: rotateX(0deg) rotateY(0deg); }
+}

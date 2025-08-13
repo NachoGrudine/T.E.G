@@ -1,0 +1,13 @@
+<app-pre-lobby
+  [idPartida]="idPartida"
+  [idUsuario]="idUsuario"
+  [visible]="mostrarPreLobby"
+  (jugadorAgregado)="alConfirmarJugador()"
+></app-pre-lobby>
+
+<app-lobby
+  [idPartida]="idPartida"
+  [idUsuario]="idUsuario"
+  [visible]="!mostrarPreLobby"
+></app-lobby>
+

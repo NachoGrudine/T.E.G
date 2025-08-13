@@ -1,0 +1,67 @@
+
+
+.barra-jugador {
+  position: fixed;
+  bottom: 0;
+  left : 23%;
+  width: 60%;
+  background-color: transparent;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px 20px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(45%);
+  z-index: 1000;
+}
+
+
+
+.tarjetas {
+  display: flex;
+  gap: 12px;
+
+}
+
+.carta {
+  width: 70px;
+  height: 100px;
+  background-color: #fffbe6;
+  border: 3px solid #000;
+  border-radius: 8px;
+  padding: 6px;
+  box-shadow: 2px 2px 0 #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.carta:hover {
+  transform: translateY(-60%);
+}
+
+.carta img {
+  max-width: 100%;
+  max-height: 100%;
+  image-rendering: pixelated;
+}
+
+.carta.usada {
+  opacity: 80%;
+  filter: grayscale(1);
+}
+
+
+.nombre-pais {
+  font-size: 0.7rem;
+  text-align: center;
+  color: #000;
+  margin-top: 4px;
+  font-weight: bold;
+  word-break: break-word;
+}
+

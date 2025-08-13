@@ -1,0 +1,46 @@
+<div class="auth-container">
+  <h2>Estadísticas</h2>
+
+  <div class="stat-item">
+    <strong>Partidas jugadas:</strong>
+    <span *ngIf="partidas">{{ partidas.jugadas }}</span>
+    <span *ngIf="!partidas">-</span>
+  </div>
+
+  <div class="stat-item">
+    <strong>Partidas ganadas:</strong>
+    <span *ngIf="partidas">{{ partidas.ganadas }}</span>
+    <span *ngIf="!partidas">-</span>
+  </div>
+
+  <div class="stat-item">
+    <strong>Porcentaje de victorias:</strong>
+    <span *ngIf="porcentaje !== undefined && porcentaje !== null">{{ porcentaje }}%</span>
+    <span *ngIf="porcentaje === undefined || porcentaje === null">-</span>
+  </div>
+
+
+  <div class="stats-section colors-section">
+    <strong class="section-title">Colores más usados:</strong>
+    <ul *ngIf="colores && (colores | keyvalue).length > 0" class="colores-lista">
+      <li *ngFor="let color of colores | keyvalue" class="color-item">
+        <span class="color-circle" [style.background]="getColorCode(color.key)"></span>
+        <span class="color-nombre" [style.color]="getColorCode(color.key)">{{ color.key }}</span>
+        <span class="color-cantidad">{{ color.value }}</span>
+      </li>
+    </ul>
+    <span *ngIf="!colores || (colores | keyvalue).length === 0" class="no-data-message">-</span>
+  </div>
+
+
+  <div class="stats-section goals-section">
+    <strong class="section-title">Objetivos cumplidos:</strong>
+    <ul *ngIf="objetivos && (objetivos | keyvalue).length > 0" class="objetivos-lista">
+      <li *ngFor="let obj of objetivos | keyvalue" class="objetivo-item" [class.completed]="obj.value === true">
+        <span class="objetivo-nombre">{{ obj.key }}:</span>
+        <span class="objetivo-estado">{{ obj.value ? 'Completado' : 'Pendiente' }}</span>
+      </li>
+    </ul>
+    <span *ngIf="!objetivos || (objetivos | keyvalue).length === 0" class="no-data-message">No hay objetivos cumplidos 😅</span>
+  </div>
+</div>

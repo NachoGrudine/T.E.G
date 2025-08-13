@@ -1,0 +1,80 @@
+<div class="lobby-container">
+
+  <h2>Lobby de la Partida #{{ partida.id }}</h2>
+
+  <p><strong>Tipo de Partida:</strong> {{ mostrarTipoPartida() }}</p>
+  <p><strong>Estado:</strong> {{ partida.estado }}</p>
+
+
+  <div *ngIf="esCreador">
+
+    <button *ngIf="esCreador" (click)="mostrarConfiguracion = true" class="config-btn" title="Configurar partida">
+      ⚙️
+    </button>
+
+
+    <app-configuracion-partida
+      *ngIf="mostrarConfiguracion"
+      [objetivoActual]="objetivoGlobal"
+      [tipoActual]="partida.tipoPartida"
+      (configuracionGuardada)="actualizarConfiguracion($event)"
+      (cerrar)="mostrarConfiguracion = false"
+    />
+    <button *ngIf="esCreador" (click)="mostrarAgregarBot = true">Agregar Bot</button>
+    <app-agregar-bot
+      *ngIf="mostrarAgregarBot"
+      [idPartida]="idPartida"
+      [visible]="mostrarAgregarBot"
+      (botAgregado)="obtenerPartida()"
+      (cerrarModal)="mostrarAgregarBot = false"
+    />
+  </div>
+
+  <div *ngIf="!esCreador">
+    <p>
+      <strong>Objetivo Global:</strong> {{ partida.cantidadParaGanar }}
+    </p>
+  </div>
+
+  <hr />
+
+  <h3>Jugadores en la Partida:</h3>
+
+  <ul class="jugadores-lista" *ngIf="jugadores.length; else sinJugadores">
+    <li *ngFor="let jugador of jugadores"
+        class="jugador-item"
+        [ngStyle]="{
+        'border-color'     : mapColorNombreToCss(jugador.color?.color),
+        'background-color' : mapColorSuave(jugador.color?.color)
+      }">
+
+      <!-- icono personita -->
+      <svg class="player-icon"
+           viewBox="0 0 24 24"
+           [ngStyle]="{ fill: mapColorNombreToCss(jugador.color?.color) }">
+        <circle cx="12" cy="7" r="4"></circle>
+        <path  d="M4 22c0-4 4-6 8-6s8 2 8 6"></path>
+      </svg>
+
+      <strong>{{ jugador.nombre }}</strong>
+      <span>({{ jugador.tipoJugador }})</span>
+    </li>
+  </ul>
+
+  <ng-template #sinJugadores>
+    <p>No hay jugadores en la partida todavía.</p>
+  </ng-template>
+
+  <hr />
+
+
+  <button
+    *ngIf="esCreador"
+    [disabled]="jugadores.length < 2"
+    (click)="iniciarPartida()"
+  >
+    Iniciar Partida
+  </button>
+</div>
+
+

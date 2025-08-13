@@ -1,0 +1,43 @@
+<div class="modal" *ngIf="visible">
+  <div class="modal-content">
+    <button class="cerrar" (click)="cerrarModal()">×</button>
+
+    <div class="jugadores">
+      <!-- Atacante -->
+      <div class="jugador" [style.color]="atacanteColor">
+        <h3>{{ atacanteNombre }}</h3>
+        <p>{{ atacantePais }}</p>
+        <div class="dados">
+          <div class="dado-cubo" *ngFor="let dado of dadosAtacante">
+            <div class="cubo" [ngClass]="'rotar-' + dado">
+              <div class="cara uno" [style.backgroundColor]="atacanteColor">1</div>
+              <div class="cara dos" [style.backgroundColor]="atacanteColor">2</div>
+              <div class="cara tres" [style.backgroundColor]="atacanteColor">3</div>
+              <div class="cara cuatro" [style.backgroundColor]="atacanteColor">4</div>
+              <div class="cara cinco" [style.backgroundColor]="atacanteColor">5</div>
+              <div class="cara seis" [style.backgroundColor]="atacanteColor">6</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Defensor -->
+      <div class="jugador" [style.color]="defensorColor">
+        <h3>{{ defensorNombre }}</h3>
+        <p>{{ defensorPais }}</p>
+        <div class="dados">
+          <div class="dado-cubo" *ngFor="let dado of dadosDefensor">
+            <div class="cubo" [ngClass]="'rotar-' + dado">
+              <div class="cara uno" [style.backgroundColor]="defensorColor">1</div>
+              <div class="cara dos" [style.backgroundColor]="defensorColor">2</div>
+              <div class="cara tres" [style.backgroundColor]="defensorColor">3</div>
+              <div class="cara cuatro" [style.backgroundColor]="defensorColor">4</div>
+              <div class="cara cinco" [style.backgroundColor]="defensorColor">5</div>
+              <div class="cara seis" [style.backgroundColor]="defensorColor">6</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

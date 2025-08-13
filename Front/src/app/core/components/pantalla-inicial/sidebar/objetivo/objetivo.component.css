@@ -1,0 +1,122 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.objetivo-wrapper {
+  background-color: #dbeeff; /* celeste claro pastel */
+  border: 2px solid #a6d4fa;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  overflow-y: auto;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #01497c;
+}
+
+/* Scrollbar caricaturesco celestito */
+.objetivo-wrapper::-webkit-scrollbar {
+  width: 10px;
+}
+
+.objetivo-wrapper::-webkit-scrollbar-track {
+  background: #e0f7ff;
+  border-radius: 10px;
+}
+
+.objetivo-wrapper::-webkit-scrollbar-thumb {
+  background: #64b5f6;
+  border-radius: 10px;
+  border: 2px solid #e0f7ff;
+}
+
+/* Título principal */
+.objetivo-wrapper h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #003f5c;
+}
+
+/* Subtítulos */
+.objetivo-wrapper h4 {
+  font-size: 1.15rem;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  color: #005a9c;
+}
+
+/* Texto plano */
+.objetivo-wrapper p {
+  font-size: 1rem;
+  margin: 4px 0;
+  font-weight: 700;
+}
+
+/* Lista */
+.objetivo-wrapper ul {
+  list-style: none;
+  padding-left: 16px;
+  margin: 0 0 6px 0;
+}
+
+/* Ítems de la lista */
+.objetivo-wrapper li {
+  margin-bottom: 4px;
+  padding: 4px 6px;
+  background-color: #e0f7ff;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  word-break: break-word;
+}
+/* Estilos de colores vivos */
+.color-rojo {
+  color: red;
+}
+
+.color-verde {
+  color: green;
+}
+
+.color-azul {
+  color: blue;
+}
+
+.color-amarillo {
+  color: goldenrod;
+}
+
+.color-naranja {
+  color: orange;
+}
+
+.color-magenta {
+  color: purple;
+}
+
+.color-negro {
+  color: black;
+}
+
+.color-blanco {
+  color: white;
+  background-color: #01497c;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.color-celeste {
+  color: skyblue;
+}
+
+.color-rosa {
+  color: pink;
+}
+
+.color-gris {
+  color: gray;
+}

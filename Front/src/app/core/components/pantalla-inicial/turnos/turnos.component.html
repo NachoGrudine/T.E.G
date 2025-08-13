@@ -1,0 +1,12 @@
+<div class="orden-caricatura">
+  <ng-container *ngFor="let jugador of jugadores; let i = index">
+    <div class="jugador" [class.actual]="i === turnoActual">
+      <div *ngIf="i === turnoActual" class="flecha-turno">⬇</div>
+      <div class="circulo" [ngStyle]="{'background-color': jugador.color}"></div>
+      <div class="nombre" >{{ jugador.nombre }}</div>
+    </div>
+    <div *ngIf="i < jugadores.length - 1" class="flecha">➡</div>
+  </ng-container>
+</div>
+
+

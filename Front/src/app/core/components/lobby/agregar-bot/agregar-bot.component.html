@@ -1,0 +1,42 @@
+<div *ngIf="visible" class="pre-lobby-container">
+  <div class="pre-lobby">
+    <h2>Agregar Bot a la Partida #{{ idPartida }}</h2>
+
+    <h3>Selecciona una dificultad:</h3>
+    <div class="dificultad-grid">
+      <button
+        *ngFor="let dificultad of dificultades"
+        [class.selected]="dificultadSeleccionada === dificultad"
+        (click)="seleccionarDificultad(dificultad)"
+        type="button"
+      >
+        {{ dificultad }}
+      </button>
+    </div>
+
+    <h3>Selecciona un color:</h3>
+    <div class="color-grid">
+      <button
+        *ngFor="let color of coloresDisponibles"
+        [disabled]="colorYaElegido(color.id)"
+        [class.selected]="idColorSeleccionado === color.id"
+        [ngStyle]="{ 'background-color': mapColorNombreToCss(color.color) }"
+        (click)="seleccionarColor(color.id)"
+        type="button"
+      >
+        {{ color.color }}
+      </button>
+    </div>
+
+    <div class="acciones">
+      <button
+        (click)="confirmar()"
+        [disabled]="!dificultadSeleccionada || idColorSeleccionado === null"
+        type="button"
+      >
+        Agregar Bot
+      </button>
+      <button (click)="cerrar()" type="button">Cancelar</button>
+    </div>
+  </div>
+</div>

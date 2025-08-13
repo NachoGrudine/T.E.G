@@ -1,0 +1,29 @@
+.auth-container label {
+  display: block;
+  text-align: left;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #bf360c;
+}
+
+.auth-container input[type="text"],
+.auth-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ffb74d;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  font-family: inherit;
+  box-shadow: inset 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.auth-container button[type="submit"] {
+  background-color: #64b5f6; /* celeste */
+  border: 3px solid #42a5f5;
+  box-shadow: 3px 3px 0 #1976d2;
+}
+.auth-container button[type="submit"]:hover {
+  background-color: #42a5f5;
+}
+

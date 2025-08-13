@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-size: cover;
+  background: url('assets/guerraChat.jpg') no-repeat fixed center center;
+  color: #3e2723;
+  font-family: 'Comic Sans MS', 'Baloo 2', cursive;
+  cursor: url('assets/ataque.png') 28 3, auto;
+
+}
+
+
+/* Contenedor de login/register */
+.auth-container {
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 30px 25px;
+  background-color: rgba(255, 248, 225, 0.9);
+  border-radius: 18px;
+  box-shadow: 6px 6px 0 #ffcc80, -6px -6px 0 #ffe0b2;
+  border: 4px dashed #ffb74d;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.auth-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Título */
+.auth-container h2 {
+  margin-bottom: 25px;
+  font-size: 2rem;
+  color: #d84315;
+  text-shadow: 1px 1px 0 #fff3e0;
+}
+
+/* Botón de acción */
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff8a65;
+  color: white;
+  border: 3px solid #ff7043;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 3px 3px 0 #d84315;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: inherit;
+}
+
+.auth-container button:hover {
+  background-color: #ff7043;
+  transform: scale(1.05);
+}
+
+
+ *{
+  cursor: url('assets/ataque.png') 3 3, auto !important;
+}
+
+
+
+

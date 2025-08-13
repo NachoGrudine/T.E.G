@@ -1,0 +1,46 @@
+<div class="pre-lobby-container">
+  <div class="pre-lobby">
+    <h2>Configuración de la Partida</h2>
+
+    <label for="objetivo">Cantidad de países para ganar:</label>
+    <input
+      type="number"
+      id="objetivo"
+      [(ngModel)]="objetivo"
+      min="26"
+      max="50"
+    />
+
+    <h3>Tipo de partida:</h3>
+    <div class="tipo-opciones">
+      <label>
+        <input
+          type="radio"
+          name="tipo"
+          value="PUBLICA"
+          [(ngModel)]="tipo"
+        />
+        Pública
+      </label>
+
+      <label>
+        <input
+          type="radio"
+          name="tipo"
+          value="PRIVADA"
+          [(ngModel)]="tipo"
+        />
+        Privada
+      </label>
+    </div>
+
+    <div class="acciones">
+      <button
+        (click)="guardar()"
+        [disabled]="objetivo < 26 || objetivo > 50 || objetivo == null">
+        Guardar
+      </button>
+      <button (click)="cerrarModal()">Cancelar</button>
+    </div>
+  </div>
+</div>

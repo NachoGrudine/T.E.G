@@ -1,0 +1,14 @@
+package ar.edu.utn.frc.tup.piii.repositories;
+
+import ar.edu.utn.frc.tup.piii.entities.Acciones;
+import ar.edu.utn.frc.tup.piii.entities.TurnosAtaques;
+import jakarta.validation.constraints.NotNull;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface AccionesRepository extends JpaRepository<Acciones, Integer> {
+    List<Acciones> getAllByTurnoAtaque(@NotNull TurnosAtaques turnoAtaque);
+}

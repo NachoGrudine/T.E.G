@@ -1,0 +1,37 @@
+<div *ngIf="paisDetalle" class="pais-detalle-container">
+  <h2>{{ paisDetalle.nombrePaisJugador }}</h2>
+  <p><strong>Fichas:</strong> {{ paisDetalle.fichas }}</p>
+  <p><strong>Dueño:</strong> {{ paisDetalle.duenio }}</p>
+
+  <h3>Fronteras:</h3>
+  <div class="fronteras-container" [class.scrollable]="paisDetalle.fronteras.length > 2">
+    <div *ngFor="let frontera of paisDetalle.fronteras; let i = index">
+      <button
+        (click)="toggle(i)"
+        class="accordion-button"
+        [ngStyle]="{
+      backgroundColor:  mapColorNombreToCss(frontera.color)
+
+    }"
+      >
+        {{ frontera.nombreFrontera }}
+      </button>
+
+      <div class="accordion-content" [hidden]="!isOpen(i)">
+        <p><strong>Fichas:</strong> {{ frontera.fichas }}</p>
+        <p><strong>Dueño:</strong> {{ frontera.duenio }}</p>
+
+        <button
+          *ngIf="puedeAtacar && frontera.idDuenio !== idJugador" (click)="atacarPais(frontera.idPais)" >
+          Atacar
+        </button>
+        <button
+          *ngIf="puedeReagrupar && frontera.idDuenio == idJugador" (click)="reagruparPais(frontera.idPais)"
+        >
+          Reagrupar
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>

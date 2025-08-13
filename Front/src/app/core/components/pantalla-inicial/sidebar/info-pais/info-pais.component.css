@@ -1,0 +1,83 @@
+.pais-detalle-container {
+  background-color: #dbeeff;
+  padding: 8px 8px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #01497c;
+
+}
+
+.pais-detalle-container h2 {
+  font-size: 1.3rem;
+  margin: 0 0 6px 0;
+}
+
+.pais-detalle-container p {
+  font-size: 1rem;
+  margin: 3px 0;
+  font-weight: 700;
+}
+
+.fronteras-container {
+  overflow: hidden;
+  background-color: #e0f7ff; /* celeste pastel */
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+.accordion-button {
+  width: 100%;
+  margin-bottom: 4px;
+  background-color: #64b5f6;
+  border: none;
+  padding: 6px 8px;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: left;
+  word-break: break-word;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px  1px 0 #000,
+    1px  1px 0 #000;
+
+}
+
+.accordion-button:hover {
+  background-color: #348ced; /* mismo azul que usás en el mapa */
+}
+
+.accordion-content {
+  background-color: #e0f7ff;
+  padding: 5px 8px;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+}
+.accordion-content {
+  transition: all 0.3s ease-in-out;
+}
+.accordion-content button {
+  background-color: #f44336; /* rojo caricaturesco */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-content button:hover {
+  background-color: #d32f2f; /* rojo más oscuro al pasar el mouse */
+}

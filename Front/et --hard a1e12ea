@@ -1,0 +1,11 @@
+[33m8ce5d93[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mEntrega1[m[33m, [m[1;31morigin/Entrega1[m[33m)[m HEAD@{0}: reset: moving to HEAD~1
+[33ma1e12ea[m HEAD@{1}: commit: organizando las carpetas y definiendo bien los turnos
+[33m8ce5d93[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mEntrega1[m[33m, [m[1;31morigin/Entrega1[m[33m)[m HEAD@{2}: commit: Archivo entrega 2(front)
+[33md07828c[m HEAD@{3}: commit: Tocando clases, terminando de definir el der
+[33ma1399bf[m HEAD@{4}: pull: Fast-forward
+[33mfdbf003[m HEAD@{5}: pull: Merge made by the 'ort' strategy.
+[33m3a9c82b[m HEAD@{6}: reset: moving to HEAD
+[33m3a9c82b[m HEAD@{7}: commit: Mas clases
+[33m72d43c1[m HEAD@{8}: commit: Primeros Bocetos
+[33m33d99cb[m[33m ([m[1;32mmain[m[33m)[m HEAD@{9}: checkout: moving from main to Entrega1
+[33m33d99cb[m[33m ([m[1;32mmain[m[33m)[m HEAD@{10}: clone: from https://github.com/2025-P3-BE-2W1/tpi-teg-grupo-19

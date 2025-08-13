@@ -1,0 +1,98 @@
+.historial-container {
+  background-color: #fff8e1; /* amarillo manteca */
+  padding: 30px;
+  border: 5px dashed #ffb74d; /* naranja pastel fuerte */
+  border-radius: 20px;
+  font-family: 'Comic Sans MS', 'Baloo 2', cursive;
+  color: #e65100; /* naranja oscuro */
+  box-shadow: 5px 5px 0 #000;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.historial-container h3 {
+  font-size: 2em;
+  - color: #ffcc80;
++ color: #e65100;
+  text-shadow: 2px 2px 0 #fff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+.partidas-scroll-wrapper {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.partidas-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.partida-card {
+  background-color: #ffffff;
+  border: 3px solid #ffb74d;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 4px 4px 0 #000;
+  transition: transform 0.2s, background-color 0.2s;
+  cursor: pointer;
+}
+
+.partida-card:hover {
+  background-color: #ffe0b2; /* naranja durazno */
+  transform: scale(1.02);
+}
+
+.partida-titulo {
+  font-size: 1.3em;
+  color: #e65100;
+  margin-bottom: 10px;
+}
+
+.partida-info {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.jugadores-titulo {
+  font-weight: bold;
+  color: #ffb74d;
+  margin-bottom: 5px;
+}
+
+.jugadores-lista {
+  list-style-type: none;
+  padding-left: 15px;
+}
+
+.jugador-item {
+  margin-bottom: 4px;
+}
+
+.jugador-id {
+  font-size: 0.85em;
+  color: #555;
+}
+
+.sin-partidas {
+  text-align: center;
+  font-size: 1.2em;
+  color: #888;
+  font-style: italic;
+}
+
+.partidas-scroll-wrapper::-webkit-scrollbar {
+  width: 10px;
+}
+
+.partidas-scroll-wrapper::-webkit-scrollbar-thumb {
+  background-color: #ffb74d;
+  border-radius: 10px;
+}
+
+.partidas-scroll-wrapper::-webkit-scrollbar-track {
+  background: #ffe0b2;
+}

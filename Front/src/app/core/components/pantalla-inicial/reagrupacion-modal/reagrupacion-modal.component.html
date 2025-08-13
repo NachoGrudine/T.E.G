@@ -1,0 +1,20 @@
+<div class="modal-overlaye" *ngIf="visible"  (click)="onCancelar()">
+
+  <div class="modale" (click)="$event.stopPropagation()" [ngStyle]="{ 'background-color': colorFondo, 'color': colorTexto }">
+    <p><strong>{{ titulo }}</strong></p>
+
+    <button class="cancelar" [disabled]="!botonCancelarActivo"
+            [ngStyle]="{ 'background-color': colorBotonCancelar }"
+            (click)="onCancelar()">cancelar</button>
+
+    <div class="contador">
+      <button class="control" (click)="decrementar()" [ngStyle]="{ 'background-color': colorControles }">-</button>
+      <span class="cantidad">{{ cantidad }}</span>
+      <button class="control" (click)="incrementar()" [ngStyle]="{ 'background-color': colorControles }">+</button>
+    </div>
+
+    <button class="tomar" (click)="onTomar()" [ngStyle]="{ 'background-color': colorBotonTomar }">
+      {{ botonTomarTexto }}
+    </button>
+  </div>
+</div>

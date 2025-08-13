@@ -1,0 +1,27 @@
+<div class="crear-partida-container">
+
+  <div class="partida">
+    <form #formCrearPartida="ngForm" (ngSubmit)="crearPartida()">
+    <button type="submit" class="boton-teg">Crear Partida</button>
+    </form>
+  </div>
+
+  <div class="partida">
+    <form #formUnirsePartida="ngForm" (ngSubmit)="unirsePartida()">
+    <label for="codigo">Ingrese un codigo de partida:</label>
+      <input type="number"
+             id="codigo"
+             name="codigo"
+             [(ngModel)]="codigoPartida"
+             required
+             step="1"
+             class="input-teg"
+      >
+
+
+      <button type="submit" class="boton-teg">Unirse Partida</button>
+    </form>
+  </div>
+
+</div>
+

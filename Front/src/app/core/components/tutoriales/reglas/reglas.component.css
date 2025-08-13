@@ -1,0 +1,91 @@
+.wTeg {
+  background-color: #fff8dc;
+  border: 3px dotted #333;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 2px 2px 0 #000;
+}
+.oTeg {
+  background-color: #0d4edc;
+  border: 3px dotted #333;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.oLTeg{
+  background-color: #7eb9ed;
+  border: 3px solid #333;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 5px;
+}
+.eTeg {
+  background-color: #e8ffdc;
+  border: 3px dotted #333;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 2px 2px 0 #000;
+}
+.cNuTeg {
+  background-color: #ffdce7;
+  border: 3px dotted #333;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.p1Teg {
+  background-color: #dcfff3;
+  border: 3px dotted #333;
+  border-radius: 0px;
+  padding: 20px;
+  box-shadow: 2px 2px 0 #000;
+}
+.b1Teg{
+  background-color: #dcfff3;
+}
+
+.p2Teg {
+  background-color: #dcffff;
+  border: 3px dotted #333;
+  border-radius: 0px;
+  padding: 20px;
+  box-shadow: 2px 2px 0 #000;
+}
+.b2Teg{
+  background-color: #dcffff;
+}
+
+.p3Teg {
+  background-color: #f2dcff;
+  border: 3px dotted #333;
+  border-radius: 0px;
+  padding: 20px;
+  box-shadow: 2px 2px 0 #000;
+}
+.b3Teg{
+  background-color: #f2dcff;
+}
+
+.p4Teg {
+  background-color: #fcdcff;
+  border: 3px dotted #333;
+  border-radius: 0px;
+  padding: 20px;
+  box-shadow: 2px 2px 0 #000;
+}
+.b4Teg{
+  background-color: #fcdcff;
+}
+
+.p5Teg {
+  background-color: #ffdfdc;
+  border: 3px dotted #333;
+  border-radius: 0px;
+  padding: 20px;
+  box-shadow: 2px 2px 0 #000;
+}
+.b5Teg{
+  background-color: #ffdfdc;
+}

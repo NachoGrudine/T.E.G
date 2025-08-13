@@ -1,0 +1,32 @@
+<div class="objetivo-wrapper">
+  <h3>🎯Tu objetivo</h3>
+
+  <div *ngIf="objetivo?.colorModel">
+    <p>
+      Eliminar al jugador de color:
+      <strong [ngClass]="getColorClass(objetivo.colorModel?.color)">
+        {{ objetivo.colorModel?.color }}
+      </strong>.
+      De ser imposible, eliminar al jugador de la derecha.
+    </p>
+
+  </div>
+
+  <div *ngIf="objetivosPorCantidad.length > 0">
+    <h4>Ocupar países:</h4>
+    <ul>
+      <li *ngFor="let obj of objetivosPorCantidad">
+        {{ obj.cantidad }} países en el continente {{ obj.continenteModel.nombre }}
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="objetivosPorContinente.length > 0">
+    <h4>Conquistar continentes:</h4>
+    <ul>
+      <li *ngFor="let obj of objetivosPorContinente">
+        Conquistar completamente {{ obj.continenteModel.nombre }}
+      </li>
+    </ul>
+  </div>
+</div>

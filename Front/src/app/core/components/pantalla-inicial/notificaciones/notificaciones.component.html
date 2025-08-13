@@ -1,0 +1,28 @@
+
+
+
+
+<div class="notificaciones-activas">
+  <div
+    *ngFor="let n of notificacionesActivas"
+    class="noti animada"
+    [ngStyle]="{ backgroundColor: n.colorFondo }"
+  >
+    {{ n.mensaje }}
+  </div>
+</div>
+
+
+<div class="historial" *ngIf="verHistorial">
+  <div id="historial-scroll" class="historial-scroll">
+    <div
+      *ngFor="let h of historial"
+      class="noti historial-item"
+      [ngStyle]="{ backgroundColor: h.colorFondo }"
+    >
+      {{ h.mensaje }}
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,19 @@
+<div class="barra-jugador">
+  <div class="tarjetas">
+    <div
+      class="carta"
+      *ngFor="let carta of tarjetas"
+
+      [class.usada]="carta.estado === 'USADA'"
+      [title]="carta.simbolo">
+      <img
+        [src]="'assets/simbolos/' + carta.simbolo.toLowerCase() + '.png'"
+        alt="{{ carta.simbolo }}"
+      />
+      <div class="nombre-pais">
+        {{ carta.nombre }}
+      </div>
+    </div>
+  </div>
+
+</div>

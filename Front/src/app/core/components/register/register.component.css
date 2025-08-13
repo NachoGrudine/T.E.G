@@ -1,0 +1,11 @@
+.auth-container input[type="text"],
+.auth-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ffb74d;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: inherit;
+  margin-bottom: 15px;
+}

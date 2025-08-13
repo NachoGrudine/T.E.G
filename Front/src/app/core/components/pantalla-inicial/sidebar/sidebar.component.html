@@ -1,0 +1,28 @@
+<div class="sidebar">
+
+  <div class="info-turno-wrapper">
+    <app-info-turno
+      *ngIf="infoTurno"
+      [texto1]="infoTurno.texto1"
+      [texto2]="infoTurno.texto2"
+      [texto3]="infoTurno.texto3"
+      [texto4]="infoTurno.texto4">
+    </app-info-turno>
+  </div>
+
+  <div class="info-pais-wrapper">
+    <app-info-pais (atacar)="onAtaque($event)" (reagrupar)="onReagrupar($event)"
+      [paisDetalle]="paisDetalle"
+      [idJugador]="idJugador"
+      [puedeAtacar]="puedeAtacar"
+     [puedeReagrupar]="puedeReagrupar"
+    ></app-info-pais>
+  </div>
+
+
+  <!-- Contenedor para objetivo -->
+  <div class="objetivo-wrapper-externo" *ngIf="objetivo">
+    <app-objetivo [objetivo]="objetivo"></app-objetivo>
+  </div>
+
+</div>
