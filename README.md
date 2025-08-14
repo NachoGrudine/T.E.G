@@ -38,5 +38,7 @@ El sistema permite a los usuarios disfrutar de una experiencia de T.E.G. digital
 
 El objetivo fue **desarrollar una versión digital del T.E.G.** aplicando buenas prácticas de desarrollo full stack, pruebas automatizadas y diseño de una arquitectura escalable, que permita agregar nuevas funcionalidades fácilmente en el futuro.
 
-
 ---
+![T.E.G](Imagenes/T.E.G.png)
+
+
